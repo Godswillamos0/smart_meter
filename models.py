@@ -5,26 +5,15 @@ class SmartMeter(Base):
     __tablename__ = 'smart_meter'
     
     id=Column(Integer, primary_key=True, index=True)
-    time_stamp=Column(DateTime, nullable=True)
-    voltage=Column(Float)
-    current=Column(Float)
-    power=Column(Float)
-    energy=Column(Float)
-
+    access_id = Column(String, unique=True, nullable=False)
     
     
-class Users(Base):
-    __tablename__ ='users'
-
-    id=Column(Integer, primary_key=True, index=True)
-    name= Column(String)
-    bill=Column(Float)
-    energy_consumption= Column(Float)
-    
-class Billings(Base):
-    __tablename__ ='bills'
+class MeterReadings(Base): 
+    __tablename__ = 'meter_readings'
     
     id=Column(Integer, primary_key=True, index=True)
-    amount=Column(Float)
-    time_stamp=Column(DateTime)
-    unit_gotten=Column(Float)
+    meter_id = Column(String, nullable=False)
+    voltage = Column(String)
+    current = Column(String)
+    power = Column(String)
+    energy = Column(String)
