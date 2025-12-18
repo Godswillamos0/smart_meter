@@ -1,4 +1,4 @@
-fastapi
-sqlqlchemy
-uvicorn
-websockets
+fastapi==0.119.1
+SQLAlchemy==2.0.44
+uvicorn==0.37.0
+websockets==15.0.1
