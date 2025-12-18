@@ -1,0 +1,4 @@
+fastapi
+sqlqlchemy
+uvicorn
+websockets
