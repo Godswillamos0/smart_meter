@@ -11,11 +11,11 @@
 #define wifiPin 23
 
 // ================= WIFI CREDENTIALS ================
-const char* ssid = "smartmeter";
-const char* password = "smartmeter";
+const char* ssid = "ssid";
+const char* password = "password";
 
 // ================= SERVER DETAILS ==================
-const char* serverBase = "https://smart-meter-cfdc.onrender.com/esp/";
+const char* serverBase = "https://***************************";
 const char* device_id  = "001";
 
 // ================= OBJECTS =========================
@@ -164,7 +164,7 @@ void sendToServer(float v, float i, float p, float e) {
   String payload;
   serializeJson(doc, payload);
 
-  // Debug: Print the actual JSON being sent
+  // Print the actual JSON being sent
   Serial.println("\n========== SENDING DATA ==========");
   Serial.println("POST URL: " + serverURL);
   Serial.println("JSON Payload: " + payload);
@@ -174,7 +174,7 @@ void sendToServer(float v, float i, float p, float e) {
   Serial.print("HTTP Response Code: ");
   Serial.println(httpResponseCode);
   
-  // Print server response for debugging
+  // Print server response 
   if (httpResponseCode > 0) {
     String response = http.getString();
     Serial.println("Server Response: " + response);
