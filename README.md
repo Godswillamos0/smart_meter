@@ -1,4 +1,4 @@
-========================== Smart Energy Meter (PZEM-004T v3.0) ========================================
+=============== Smart Energy Meter (PZEM-004T v3.0) =====================
 
 An ESP32-based smart energy monitoring system** that measures voltage, current, power, and energy consumption using the PZEM-004T v3.0 module, displays readings on an I2C LCD, and sends real-time data to a 
 FastAPI backend server over Wi-Fi.
